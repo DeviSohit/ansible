@@ -1,9 +1,9 @@
-- name: testing variables presedence
+- name: testing variables presedence/importance
   hosts: mongodb
   vars:
     NAME: Devi-play
-  vars_file:
-    -variables.yaml
+  vars_files:
+  - variables.yaml
   vars_prompt:
   - name: NAME
     prompt: please enter your name
