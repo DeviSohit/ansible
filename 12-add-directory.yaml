@@ -12,7 +12,7 @@
     ansible.builtin.debug:
       msg: "exit status is: {{OUTPUT.rc}}"
   - name: create app directory
-    #become: yes #we need sudo access for only this module
+    become: yes #we need sudo access for only this module
     ansible.builtin.file:
       name: /app
       path: /home/centos/
