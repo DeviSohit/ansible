@@ -10,8 +10,8 @@
     private: false
   tasks:
   - name: print variable name at task level 
-    vars:
-      NAME: Devi-task
-      ansible.builtin.debug:
+  vars:
+    NAME: Devi-task
+    ansible.builtin.debug:
       msg: "my name is {{NAME}}"
   
