@@ -6,6 +6,7 @@ roboshop-us-dev-db-mongodb-01.devidevops.online
 [mongodb:vars]
 MONGO_USER=mongoadmin
 MONGO_DB=catalogue 
+NAME=Devi-inventory
 
 [mysql]
 roboshop-us-dev-db-mysql-01.devidevops.online

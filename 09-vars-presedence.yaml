@@ -1,0 +1,17 @@
+- name: testing variables presedence
+  hosts: mongodb
+  vars:
+    NAME: Devi-play
+  vars_file:
+    -variables.yaml
+  vars_prompt:
+  - name: NAME
+    prompt: please enter your name
+    private: false
+  tasks:
+  - name: print variable name at task level 
+    vars:
+      NAME: Devi-task
+      ansible.builtin.debug:
+      msg: "my name is {{NAME}}"
+  
