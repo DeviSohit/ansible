@@ -1,0 +1,19 @@
+- name: create directory
+  hosts: localhost
+  tasks:
+  - name: check app dorectory exist or not
+    ansible.builtin.command: cd /app
+    register: OUTPUT
+    ignore_errors: true
+  - name: print the command output
+    ansible.builtin.debug:
+      msg: "output is: {{OUTPUT}}"
+  - name: print the exit status
+    ansible.builtin.debug:
+      msg: "exit status is: {{OUTPUT.rc}}"
+  - name: create app directory
+    #become: yes #we need sudo access for only this module
+    ansible.builtin.file:
+      name: app
+      state: directory
+    when: OUTPUT.rc != 0 #if this expression is true then only this module will run
