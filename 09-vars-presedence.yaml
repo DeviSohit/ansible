@@ -1,4 +1,4 @@
-- name: testing variables presedence/importance
+- name: testing variables presedence or importance
   hosts: mongodb
   vars:
     NAME: Devi-play
@@ -10,8 +10,8 @@
     private: false
   tasks:
   - name: print variable name at task level 
-  vars:
-    NAME: Devi-task
-    ansible.builtin.debug:
-      msg: "my name is {{NAME}}"
+    vars:
+      NAME: Devi-task
+      ansible.builtin.debug:
+        msg: "my name is {{NAME}}"
   
