@@ -1,4 +1,4 @@
-- nanme: variables from files
+- name: variables from files
   hosts: localhost
   vars_files:
   - variables.yaml
