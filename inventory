@@ -3,6 +3,10 @@
 [mongodb]
 roboshop-us-dev-db-mongodb-01.devidevops.online
 
+[mongodb:vars]
+MONGO_USER=mongoadmin
+MONGO_DB=catalogue 
+
 [mysql]
 roboshop-us-dev-db-mysql-01.devidevops.online
 roboshop-us-dev-db-mysql-02.devidevops.online
