@@ -1,7 +1,7 @@
 192.72.30.1
 150.162.20.2
 [mongodb]
-roboshop-us-dev-db-mongodb-01.devidevops.online
+172.31.40.63
 
 [mongodb:vars]
 MONGO_USER=mongoadmin
